@@ -1,0 +1,1145 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+#html_landing{
+    /* height: 95vh; */
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#html_search{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#html_about{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#html_wishlist{
+    height: 100%;
+}
+#html_beer_results{
+    height: 100%;
+}
+
+#body_landing{
+    /* height: 100%; */
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#body_wishlist{
+    height: 100%;
+}
+#body_beer_results{
+    height: 100%;
+}
+#body_search {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#body_about {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#about_subtitle{
+    text-align: center;
+    color: teal;
+}
+
+
+
+/* CSS para Header */
+.headerleft{
+    float: right;
+    color: rgb(247, 190, 33) !important;
+    opacity: 0.7;
+    max-height: 100px;
+}
+.headerleft:hover{
+    opacity: 1.0;
+}
+#Wishlist{
+    color: rgb(247, 190, 33);
+    margin-left: 10px;
+    margin-right: 10px;
+}    
+.titleactive{
+    color: rgb(247, 190, 33) !important;
+    opacity: 1.0 !important;
+    border-radius: 10%;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 0.08rem;
+    max-width: max-content;
+    float: right;
+}
+#Cart{
+    color: rgb(247, 190, 33);
+    margin-left: 10px;
+    margin-right: 10px;
+}    
+.navicons{
+    display: inline;
+    opacity: 0.7;
+}
+
+
+
+
+
+#footer {
+    /* position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;          */
+    background-color: #767580;
+    color: white; 
+    flex-shrink: 0;
+}
+.content{
+    flex: 1 0 auto;
+    /* background-image: url(images/beer_toast.jpg); */
+    background-image: url("..\\images\\beer_toast.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+}
+#background{
+    display: flex;
+    max-width: 100% ;
+    max-height: fit-content;
+}
+.contact{
+    color: #5dd2ff;
+}
+.main_title{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: fantasy;
+}
+.buttons_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 4rem;
+}
+.buttons{
+    /* min-width: 80px; */
+    /* max-width: 800px; */
+    /* place-self: center; */
+    padding: 2rem;
+    font-size: 2rem;
+    display: flex;
+}
+.phrase{
+    color:whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 8rem;
+    margin-top: 12rem;
+    margin-right: 8rem;
+}
+#phrase_main{
+    text-align:center;
+}
+#phrase_author{
+    text-align:right;
+    color: lightgrey;
+}
+
+/* CSS para Beers.html */
+.contenedor{
+    position: relative;
+}
+.addToList{
+    opacity: 0;
+}
+.addToList:hover{
+    transition:0s !important;
+    transition-delay: 0s;
+}
+.addToCart:hover{
+    transition:0s !important;
+    transition-delay: 0s;
+}
+.addToList:disabled{
+    color: gray;
+    background-color: rgb(182, 187, 115);
+    opacity:0.5 !important;
+    position: absolute;
+    top: 10px;
+    right: 20px !important;
+    cursor: not-allowed; 
+}
+.card:hover .addToList{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 20px; 
+    opacity: 1.0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+.addToCart{
+    opacity: 0;
+}
+.addToCart:disabled{
+    opacity: 0.5 !important;
+}
+.card:hover .addToCart{
+    float: right;
+    position: absolute;
+    top: 60px;
+    right: 20px; 
+    opacity: 1.0;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    cursor: no-drop;
+}
+#beer_content{
+    margin: 0px;
+}
+.beer_image{
+    object-fit: contain;
+    max-height: 450px;
+    height: auto;
+    width: 100%;
+    padding:5%;
+    align-content:center;
+    opacity: 1;
+}
+.card{
+    background: none;
+    border: none;
+}
+.beer_name{
+    text-align: center;
+    text-align-last: center;
+    /* color: darkgray; */
+    text-emphasis-style: none;
+    text-emphasis-color: currentcolor;
+}
+.beer_tagline{
+    align-self: center;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.text {
+    color: white;
+    font-size: 200%;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    padding:8%;
+    text-align: justify;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(126, 125, 125);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    background-image: url('..\\images\\hop_no_back_green.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+  }
+ .card:hover .overlay {
+    height: 85%;
+  }
+  .card:hover{
+      opacity: 1.0;
+      color: darkmagenta;
+  }
+  .listado{
+    padding-inline-start: 0px;
+    margin-top: 5%;
+    margin-bottom:5%;
+  }
+  .list_element{
+      text-transform: capitalize;
+      font-size: 45%;
+      width: 100%;
+      list-style-position: inside;
+    
+  }
+
+
+
+  /* CSS para Search.html */
+.main.search{
+      display: flex;
+      align-content: center;
+}
+.hidecol{
+    display: none;
+}
+.input-group{
+      display: flex;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.btn-secondary{
+    background-color: rgb(175, 173, 173);
+    border-color: lightgray;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+  .searchbar{
+    margin-bottom: 3rem;
+  }
+  #alcohol, #amargo, #color{
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .filters{
+    align-self: center;
+    text-align: center;
+    color: white;
+    margin:0;
+    margin-left:1rem;
+  }
+  .values{
+      margin:0;
+  }
+  .slidecontainer {
+    width: 30%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 40px;
+    background: url('..\\images\\bottle_alcohol_black.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: url('..\\images\\bottle_alcohol.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  .alc_value, .bit_value, .col_value{
+    color: red;
+  }
+  #bit_max::-webkit-slider-thumb,#bit_min::-webkit-slider-thumb{
+    width: 35px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    background: url('..\\images\\hop_white.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size:cover !important;
+    background-position: center !important;
+    cursor: pointer !important;
+  }
+
+  #col_max::-webkit-slider-thumb,#col_min::-webkit-slider-thumb{
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    background: url('..\\images\\multicolor_icon_white.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size:cover !important;
+    background-position: center !important;
+    cursor: pointer !important;
+  }
+  
+/* Fin CSS slider alcohol */
+
+/* CSS para switch alcohol, amargo y color*/
+#switch_alcohol{
+    align-self: center;
+    padding-left: 20px;
+}    
+#switch_amargo{
+    align-self: center;
+    padding-left: 20px;
+}
+#switch_color{
+    align-self: center;
+    padding-left: 20px;
+}
+
+.switch {
+    position: relative;
+}
+
+.switch input {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.switch label {
+    height: 30px;
+    width: 80px;
+    background-color: #39315a;
+    border-radius: 100px;
+    display: block;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 5px -2px rgba(0, 0, 0, 0.4);
+}
+
+.switch label .bulb {
+    height: 20px;
+    width: 20px;
+    background-color: #4a426b;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    display: block;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    box-shadow: inset 0 0 1px 3px #4a426b, inset 0 0 6px 8px #423963, 0 20px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.switch label .bulb .bulb-center {
+    position: absolute;
+    display: block;
+    height: 36px;
+    width: 36px;
+    background-color: #5a527b;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 4px #635a84;
+}
+
+.switch label .bulb .bulb-center:after {
+    content: "";
+    display: block;
+    height: 14px;
+    width: 14px;
+    background-color: #7b7394;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 2px 4px #524a73;
+}
+
+.switch label .bulb .filament-1,
+.switch label .bulb .filament-2 {
+    position: absolute;
+    display: block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.switch label .bulb .filament-1:after,
+.switch label .bulb .filament-2:after,
+.switch label .bulb .filament-1:before,
+.switch label .bulb .filament-2:before {
+    content: "";
+    display: block;
+    height: 6px;
+    width: 17px;
+    border-radius: 50%;
+    border: 2px solid #4a426b;
+    position: absolute;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    top: -4px;
+    left: -2px;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.switch label .bulb .filament-1:before,
+.switch label .bulb .filament-2:before {
+    left: 15px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.switch label .bulb .filament-2 {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) !important;
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+.reflections {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 90;
+    -webkit-perspective: 70px;
+    perspective: 70px;
+}
+
+.reflections span {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(-135deg, transparent 10%, rgba(255, 255, 255, 0.3));
+    position: absolute;
+    left: -40px;
+    bottom: -45px;
+}
+
+.reflections span:after {
+    content: "";
+    display: block;
+    height: 35px;
+    width: 20px;
+    position: absolute;
+    top: -36px;
+    right: -40px;
+    border-radius: 50%;
+    box-shadow: 4px -2px 0 -3px rgba(255, 255, 255, 0.4);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.reflections:after {
+    content: "";
+    display: block;
+    height: 80px;
+    width: 50px;
+    background-image: linear-gradient(80deg, rgba(255, 255, 255, 0.05) 45%, rgba(255, 255, 255, 0.5));
+    border-radius: 10% 20% 50% 30%/30% 60% 30% 40%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(-25deg) rotate(-35deg) skewx(-15deg) translate(10px, -20px);
+    transform: rotateX(-25deg) rotate(-35deg) skewx(-15deg) translate(10px, -20px);
+    top: -8px;
+    left: -5px;
+}
+
+.reflections:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 30px;
+    background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.15)));
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15));
+    bottom: 10px;
+    right: 0px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sparks .spark1 {
+    display: block;
+    height: 1px;
+    width: 1px;
+    background-color: #d1b82b;
+    position: absolute;
+    right: -5px;
+    border-radius: 50%;
+    bottom: 23px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.sparks .spark2 {
+    display: block;
+    height: 3px;
+    width: 3px;
+    background-color: #d1b82b;
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    bottom: 80px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.sparks .spark3 {
+    display: block;
+    height: 3px;
+    width: 3px;
+    background-color: #d1b82b;
+    position: absolute;
+    left: 20px;
+    border-radius: 50%;
+    bottom: 80px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.sparks .spark4 {
+    display: block;
+    height: 3px;
+    width: 3px;
+    background-color: #d1b82b;
+    position: absolute;
+    left: 20px;
+    border-radius: 50%;
+    bottom: 20px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.switch input:checked~label .bulb {
+    left: 50px;
+    background-color: #a7694a;
+    box-shadow: inset 0 0 1px 3px #a56758, inset 0 0 6px 8px #6b454f, 0 20px 30px -10px rgba(0, 0, 0, 0.4), 0 0 30px 50px rgba(253, 184, 67, 0.1);
+}
+
+.switch input:checked~label .bulb>.bulb-center {
+    background-color: #feed6b;
+    box-shadow: inset 0 0 0 4px #fdec6a, 0 0 12px 10px #bca83c, 0 0 20px 14px #a1664a;
+}
+
+.switch input:checked~label .bulb>.bulb-center:after {
+    background-color: #fef401;
+    box-shadow: 0 0 2px 4px #fdb843;
+}
+
+.switch input:checked~label .bulb>.filament-1:before,
+.switch input:checked~label .bulb>.filament-2:before,
+.switch input:checked~label .bulb>.filament-1:after,
+.switch input:checked~label .bulb>.filament-2:after {
+    border-color: #fef4d5;
+}
+
+.switch input:checked~label .bulb>.sparks .spark1 {
+    height: 1px;
+    width: 1px;
+    -webkit-animation: spark1 2s ease-in-out;
+    animation: spark1 2s ease-in-out;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.switch input:checked~label .bulb>.sparks .spark2 {
+    height: 1px;
+    width: 1px;
+    -webkit-animation: spark2 2.4s ease-in-out;
+    animation: spark2 2.4s ease-in-out;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.switch input:checked~label .bulb>.sparks .spark3 {
+    height: 1px;
+    width: 1px;
+    -webkit-animation: spark3 2s ease-in-out;
+    animation: spark3 2s ease-in-out;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.switch input:checked~label .bulb>.sparks .spark4 {
+    height: 1px;
+    width: 1px;
+    -webkit-animation: spark4 1.7s ease-in-out;
+    animation: spark4 1.7s ease-in-out;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+@-webkit-keyframes spark1 {
+    0% {
+        right: -5px;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+    }
+
+    20% {
+        height: 3px;
+        width: 3px;
+        right: 0px;
+        opacity: 1;
+    }
+
+    30% {
+        right: -5px;
+        opacity: 1;
+        height: 3px;
+        width: 3px;
+    }
+
+    70% {
+        height: 3px;
+        width: 3px;
+    }
+
+    100% {
+        right: -60px;
+        bottom: 40px;
+        opacity: 0;
+    }
+}
+
+@keyframes spark1 {
+    0% {
+        right: -5px;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+    }
+
+    20% {
+        height: 3px;
+        width: 3px;
+        right: 0px;
+        opacity: 1;
+    }
+
+    30% {
+        right: -5px;
+        opacity: 1;
+        height: 3px;
+        width: 3px;
+    }
+
+    70% {
+        height: 3px;
+        width: 3px;
+    }
+
+    100% {
+        right: -60px;
+        bottom: 40px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes spark2 {
+    0% {
+        height: 3px;
+        width: 3px;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        right: -20px;
+        bottom: 100px;
+        opacity: 0;
+    }
+}
+
+@keyframes spark2 {
+    0% {
+        height: 3px;
+        width: 3px;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        right: -20px;
+        bottom: 100px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes spark3 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        height: 2px;
+        width: 2px;
+    }
+
+    100% {
+        left: 0px;
+        bottom: 100px;
+        opacity: 0;
+        height: 3px;
+        width: 3px;
+    }
+}
+
+@keyframes spark3 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        height: 2px;
+        width: 2px;
+    }
+
+    100% {
+        left: 0px;
+        bottom: 100px;
+        opacity: 0;
+        height: 3px;
+        width: 3px;
+    }
+}
+
+@-webkit-keyframes spark4 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        height: 2px;
+        width: 2px;
+    }
+
+    100% {
+        left: -20px;
+        bottom: -10px;
+        opacity: 0;
+        height: 3px;
+        width: 3px;
+    }
+}
+
+@keyframes spark4 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        height: 2px;
+        width: 2px;
+    }
+
+    100% {
+        left: -20px;
+        bottom: -10px;
+        opacity: 0;
+        height: 3px;
+        width: 3px;
+    }
+}
+/* Fin CSS switch alcohol */
+
+
+  /* CSS para ResultBeers.html */
+#numberOfResults{
+    display: flex;
+    text-align: center;
+    place-content: center;
+    color: whitesmoke;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+#beer_results{
+    margin:0;
+}
+
+
+
+  /* CSS para Wishlist */
+.container{
+    margin:0px;
+    max-width: max-content;
+    justify-content: space-evenly;
+}
+.wishcard{
+    display: flex;
+    width: 55vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+}
+.removeButton{
+      margin:1vw;
+}
+.cartButton{
+    margin:1vw;
+    cursor: not-allowed !important;
+}
+.card-body{
+        padding:0;
+        padding-left: 1rem;
+}
+.card-title{
+      color:white;
+}
+
+.card-subtitle{
+    color:rgb(247, 190, 33);
+}
+.card-text{
+    text-align: justify;
+    color:rgb(204, 204, 204);
+}
+.text-muted{
+      color:rgb(216, 214, 214) !important;
+}
+
+.card:hover .card-title{
+    color:greenyellow;   
+}
+.card:hover .card-subtitle{
+    color: white;
+}
+.card:hover .card-text{
+    color:white
+}
+.card:hover .text-muted{
+    color: greenyellow !important;
+} 
+
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 640px){
+    .content{
+        flex: 1 0 auto;
+        background-image: url('..\\images\\beer_pint_background.jpg');
+        /* filter: blur(8px);
+        -webkit-filter: blur(8px); */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        background-position: center;
+    }
+
+    #footer{
+        height: 50px;
+        font-size: 12.5px;
+        padding-top: 0.5rem;
+    }
+    .py-3{
+        padding-top: 0rem !important;
+        padding-bottom: 0;
+    }
+    .main_title{
+        color: #F7BE21;
+        text-align: center;
+        padding-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: fantasy;
+        font-size: 2rem;
+    }
+    .buttons_container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .buttons{
+        padding: 1rem;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .phrase{
+        margin-left: 1.5rem;
+        margin-top: 9rem;
+        margin-right: 1.5rem;
+    }
+    #phrase_main{
+        text-align:center;
+        font-size: 1rem;;
+    }
+    #phrase_author{
+        text-align:right;
+        color: lightgrey;
+        font-size: 0.7rem;;
+        margin-right: 1rem;
+    }
+
+    /* Beers */
+    .card{
+        columns: 100%;   
+    }
+    .overlay{
+        margin-left: 2%;
+        width: 95%;
+    }
+
+    /* Wishlist */
+    #list_content{
+        padding:0;
+        margin:0;   
+    }
+    .wishcard{
+        width: 100%;
+        padding:0;
+        margin-left:0;
+        margin-right:0;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+    .card-subtitle{
+        font-size: 1rem;
+    }
+    .card-text{
+        font-size:0.7rem;
+    }
+    .removeButton, .cartButton{
+        margin-left: .7rem;
+        font-size: 0.8rem;
+        padding: .4rem;
+    }
+
+    /* Search */
+    #html_search{
+        height: 100% !important;
+    }
+    #body_search {
+        height: 100% !important;
+    }
+    .hidecol{
+        display: flex;
+    }
+    .filters{
+        margin: 0;
+        margin-left: 0.5rem;
+        padding:0;
+        color: white;
+        font-size: 2rem;
+    }
+    .searchbar{
+        margin-bottom: 2rem;
+    }
+    #alcohol{
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-style: ridge;
+        border-top: none;
+        padding-bottom: 0.5rem;
+    }
+    #switch_alcohol{
+    padding:0;
+    }
+    #amargo{
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
+    } 
+    #color{
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-style: ridge;
+        border-bottom: none;
+        padding-top: 1rem;
+    }
+    .h5, h5{
+          font-size: 1rem !important;
+    }
+    .slidecontainer{
+        padding:0;
+        margin:0;
+    }
+    
+    /* ResultBeers */
+    #numberOfResults{
+        display: flex;
+        text-align: center;
+        place-content: center;
+        color: whitesmoke;
+        margin:0.5rem;        
+        font-size: 1rem;
+    }
+    
+}

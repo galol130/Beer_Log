@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" id='html_search'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garagardo</title>
+    <!-- Inicio icono browser tab -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Fin icono browser tab -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Look&feel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="body_search">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Beer_icon.png" width="35" height="35" alt="Nav_Logo">
+                The Beer Log
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Advanced Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">News</a>
+                    </li>
+                </ul>
+                <ul class='navbar-nav'>
+                    <li class="nav-item">
+                        <a class="nav-link headerleft" id='Wishlist' href="wishList.html">
+                            <img src='images/wishlist_icon.png' class='navicons' height="30px" width="30px"
+                                alt='wish_list_icon'>
+                            My Wish List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link headerleft" id='Cart' href="cart.html">
+                            <img src='images/shopping_icon.png' class='navicons' height="30px" width="30px"
+                                alt='wish_list_icon'>
+                            My Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id='main_search' class='content'>
+        <h1 id='main_title_search' class='main_title'>Advanced Search</h1>
+
+        <div class="input-group row searchbar">
+            <input type="text" class="form-control col-8 offset-2 col-md-4 offset-md-4" placeholder="Type anything to look for a beer"
+                id='wordsToSearch'>
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" id='button_search'>
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- slider para alcohol -->
+        <div id='alcohol' class='row'>
+            <!-- Switch para alcohol -->
+            <h3 class='col-4 col-md-2 filters'>ALCOHOL</h3>
+            <div id='switch_alcohol' class='col-2 col-md-1'>
+                <div class="switch">
+                    <input type="checkbox" name="toggle" id='toggleAlc' onclick="ShowAlcSlider()">
+                    <label for="toggle">
+                        <i class="bulb">
+                            <span class="bulb-center"></span>
+                            <span class="filament-1"></span>
+                            <span class="filament-2"></span>
+                            <span class="reflections">
+                                <span></span>
+                            </span>
+                            <span class="sparks">
+                                <i class="spark1"></i>
+                                <i class="spark2"></i>
+                                <i class="spark3"></i>
+                                <i class="spark4"></i>
+                            </span>
+                        </i>
+                    </label>
+                </div>
+            </div>
+            <div class='col-3 hidecol'></div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderAlcMin' style="opacity: 0.5">
+                <h5 class='filters'>MIN</h5>
+                <input type="range" min="0" max="300" value="25" class="slider" id="alc_min">
+                <p class='values'>Value:
+                    <span id="alc_min_val" class='alc_value'></span>
+                </p>
+            </div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderAlcMax' style="opacity: 0.5">
+                <h5 class='filters'>MAX</h5>
+                <input type="range" min="0" max="300" value="285" class="slider" id="alc_max">
+                <p class='values'>Value:
+                    <span id="alc_max_val" class='alc_value'></span>
+                </p>
+            </div>
+        </div>
+        <!-- Fin slider para alcohol -->
+        
+        <!-- slider para amargo -->
+        <div id='amargo' class='row'>
+            <!-- Switch para amargo -->
+            <h3 class='col-5 col-md-2 filters'>BITTERNESS</h3>
+            <div id='switch_amargo' class='col-2 col-md-1'>
+                <div class="switch">
+                    <input type="checkbox" name="toggle" id='toggleBit' onclick="ShowBitSlider()">
+                    <label for="toggle">
+                        <i class="bulb">
+                            <span class="bulb-center"></span>
+                            <span class="filament-1"></span>
+                            <span class="filament-2"></span>
+                            <span class="reflections">
+                                <span></span>
+                            </span>
+                            <span class="sparks">
+                                <i class="spark1"></i>
+                                <i class="spark2"></i>
+                                <i class="spark3"></i>
+                                <i class="spark4"></i>
+                            </span>
+                        </i>
+                    </label>
+                </div>
+            </div>
+            <div class='col-3 hidecol'></div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderBitMin' style="opacity: 0.5">
+                <h5 class='filters'>MIN</h5>
+                <input type="range" min="0" max="100" value="5" class="slider" id="bit_min">
+                <p class='values'>Value:
+                    <span id="bit_min_val" class='alc_value'></span>
+                </p>
+            </div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderBitMax' style="opacity: 0.5">
+                <h5 class='filters'>MAX</h5>
+                <input type="range" min="0" max="100" value="90" class="slider" id="bit_max">
+                <p class='values'>Value:
+                    <span id="bit_max_val" class='bit_value'></span>
+                </p>
+            </div>
+        </div>
+        <!-- Fin slider para amargo -->
+
+        <!-- slider para color -->
+        <div id='color' class='row'>
+            <!-- Switch para color -->
+            <h3 class='col-6 col-md-2 filters'>COLOR EBC</h3>
+            <div id='switch_color' class='col-2 col-md-1'>
+                <div class="switch">
+                    <input type="checkbox" name="toggle" id='toggleCol' onclick="ShowColSlider()">
+                    <label for="toggle">
+                        <i class="bulb">
+                            <span class="bulb-center"></span>
+                            <span class="filament-1"></span>
+                            <span class="filament-2"></span>
+                            <span class="reflections">
+                                <span></span>
+                            </span>
+                            <span class="sparks">
+                                <i class="spark1"></i>
+                                <i class="spark2"></i>
+                                <i class="spark3"></i>
+                                <i class="spark4"></i>
+                            </span>
+                        </i>
+                    </label>
+                </div>
+            </div>
+            <div class='col-3 hidecol'></div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderColMin' style="opacity: 0.5">
+                <h5 class='filters'>MIN</h5>
+                <input type="range" min="0" max="100" value="5" class="slider" id="col_min">
+                <p class='values'>Value:
+                    <span id="col_min_val" class='col_value'></span>
+                </p>
+            </div>
+            <div class="slidecontainer col-5 col-md-4" id='sliderColMax' style="opacity: 0.5">
+                <h5 class='filters'>MAX</h5>
+                <input type="range" min="0" max="100" value="90" class="slider" id="col_max">
+                <p class='values'>Value:
+                    <span id="col_max_val" class='col_value'></span>
+                </p>
+            </div>
+        </div>
+        <!-- Fin slider para color -->
+    </div>
+
+
+    <footer id='footer' class='bg-dark'>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright
+            <a class="contact" href="https://www.linkedin.com/in/galo-garcia-pugliese/"> Galo GP </a>
+            <br>
+            <div>Powered by
+
+                <a class="contact" href="http://bbkbootcamp.com/"> BBK Bootcamp </a>
+                &
+                <a class="contact" href="https://punkapi.com/documentation/v2"> Punk API </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="Scripts/ScriptSearch.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

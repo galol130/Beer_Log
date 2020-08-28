@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" id='html_landing'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Beer search engine">
+    <meta name="author" content="GGP">
+
+    <title>Garagardo by GGP</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Look&feel.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body id='body_landing'>
+    <header id='header_Landing' class='fixed-top'>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="images/Beer_icon.png" width="45" height="45" alt="Nav_Logo">
+                The Beer Log
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Advanced Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">News</a>
+                    </li>
+                </ul>
+                <ul class='navbar-nav'>
+                    <li class="nav-item">
+                        <a class="nav-link headerleft" id='Wishlist' href="wishList.html">
+                            <img src='images/wishlist_icon.png' class='navicons' height="30px" width="30px"
+                                alt='wish_list_icon'>
+                            My Wish List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link headerleft" id='Cart' href="cart.html">
+                            <img src='images/shopping_icon.png' class='navicons' height="30px" width="30px"
+                                alt='wish_list_icon'>
+                            My Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id='main_landing' class='content'>
+        <h1 id='main_title_landing' class='main_title'>Welcome to the Beer Log!</h1>
+
+        <div class='buttons_container'>
+            <button type="button" class="btn btn-outline-info btn-lg buttons" id='show_beers'>SHOW BEERS</button>
+
+            <button type="button" class="btn btn-outline-info btn-lg buttons" id='food_pairing'>FOOD PAIRING</button>
+        </div>
+        <div class='phrase'>
+            <h3 id='phrase_main'>
+                Beer may not solve your problems, but neither will water or milk.
+            </h3>
+            <h5 id='phrase_author'>
+                Wiley
+            </h5>
+        </div>
+
+    </div>
+
+
+    <footer id='footer' class='bg-dark'>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright
+            <a class="contact" href="https://www.linkedin.com/in/galo-garcia-pugliese/"> Galo GP </a>
+            <br>
+            <div>Powered by
+
+                <a class="contact" href="http://bbkbootcamp.com/"> BBK Bootcamp </a>
+                &
+                <a class="contact" href="https://punkapi.com/documentation/v2"> Punk API </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="Scripts/ScriptLanding.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
